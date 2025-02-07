@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+
+@layer base {
+  :root {
+    --color-dark: 30, 30, 46; /* Dark purple */
+    --color-accent: 255, 111, 97; /* Coral pink */
+    --color-primary: 100, 140, 180; /* Muted pink */
+    --color-secondary: 240, 248, 255; /* Teal */
+    --color-highlight: 255, 209, 102; /* Gold */
+  }
+}
+
+@layer utilities {
+  .text-dark {
+    color: rgb(var(--color-dark));
+  }
+  .bg-dark {
+    background-color: rgb(var(--color-dark));
+  }
+  .text-accent {
+    color: rgb(var(--color-accent));
+  }
+  .bg-accent {
+    background-color: rgb(var(--color-accent));
+  }
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
+  .bg-primary {
+    background-color: rgb(var(--color-primary));
+  }
+  .text-secondary {
+    color: rgb(var(--color-secondary));
+  }
+  .bg-secondary {
+    background-color: rgb(var(--color-secondary));
+  }
+  .text-highlight {
+    color: rgb(var(--color-highlight));
+  }
+  .bg-highlight {
+    background-color: rgb(var(--color-highlight));
+  }
+}
