@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
 
 
 # Google Books API key
@@ -44,7 +43,7 @@ def get_books():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=7001)
 
     # Remove pagination params for now
     # start_index = int(request.args.get('startIndex', 0))  # Default start index is 0

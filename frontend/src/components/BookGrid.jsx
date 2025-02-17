@@ -11,7 +11,7 @@ const BookGrid = () => {
   // Function to fetch books based on search query
   const fetchBooks = async (searchQuery) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/books?q=${searchQuery}`);
+      const response = await fetch(`http://127.0.0.1:7001/api/books?q=${searchQuery}`);
       if (!response.ok) {
         throw new Error('Failed to fetch books');
       }
