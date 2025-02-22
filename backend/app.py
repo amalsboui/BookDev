@@ -42,7 +42,8 @@ def get_books():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=7001)
+    app.run(host='0.0.0.0', debug=True, port=7001)
+    #0.0.0.0 makes the flask accessible inside the docker network
 
     # Remove pagination params for now
     # start_index = int(request.args.get('startIndex', 0))  # Default start index is 0
