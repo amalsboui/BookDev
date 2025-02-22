@@ -1,3 +1,5 @@
+from flask import Flask
+from flask_cors import CORS
 from flask import Flask, jsonify, request
 import os
 import requests
@@ -7,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-
+CORS(app) 
 
 # Google Books API key
 GOOGLE_BOOKS_API_KEY = os.getenv('GOOGLE_BOOKS_API_KEY')
