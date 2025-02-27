@@ -11,7 +11,7 @@ This project is part of a hands-on **DevOps learning journey**. The application 
 - **Testing**: Introducing automated tests to ensure reliability as the project grows.  
 - **Continuous Improvements**: Implementing DevOps best practices to enhance scalability and maintainability.  
 
-This is a **work in progress**, with continuous improvements along the way! 🚀  
+This is a **work in progress**, with continuous improvements along the way! 
 
 ---
   
