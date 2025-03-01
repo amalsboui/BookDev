@@ -2,20 +2,16 @@ name: Flask API CI/CD
 
 on:
   push:
-    paths:
-      - "backend/**"
     branches:
       - main
   pull_request:
-    paths:
-      - "backend/**"
     branches:
       - main
 
 jobs:
-  test:
+  test-backend:
+    name: Test Flask Backend 
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -32,10 +28,29 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Run Tests
+      - name: Run Flask Tests
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
         run: |
           cd backend
           source venv/bin/activate
           pytest -v
+
+  test-frontend:
+    name: Test React Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm ci
+      - name: Run tests (Vitest)
+        run: |
+          cd frontend
+          npm run test
+  
