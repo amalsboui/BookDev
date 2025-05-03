@@ -1,3 +1,4 @@
+import React from 'react';
 const Navbar = () => {
     return (
       <nav className="bg-dark p-4 shadow-lg">

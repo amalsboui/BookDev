@@ -1,3 +1,4 @@
+import React from 'react';
 const BookCard = ({ title, author, cover }) => {
   return (
     <div className="bg-primary p-4 rounded-lg shadow-md flex flex-col w-full max-w-xs mx-auto">
