@@ -11,7 +11,7 @@ export default [
   ...tseslint.configs.recommended,
   {
     rules: {
-      "react/prop-types": "off",          // Disable PropTypes (use TypeScript instead)
+              
     },
   },
   pluginReact.configs.flat.recommended,

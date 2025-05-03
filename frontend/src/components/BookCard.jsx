@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'; 
 const BookCard = ({ title, author, cover }) => {
   return (
     <div className="bg-primary p-4 rounded-lg shadow-md flex flex-col w-full max-w-xs mx-auto">
@@ -22,6 +23,12 @@ const BookCard = ({ title, author, cover }) => {
       </div>
     </div>
   );
+};
+
+BookCard.propTypes = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+  cover: PropTypes.string
 };
 
 export default BookCard;
