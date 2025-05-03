@@ -8,6 +8,13 @@ export default defineConfig({
   plugins: [
     react(), 
     tailwindcss(),
-    eslint()
+    eslint({
+      cache: false, 
+      overrideConfig: {
+        settings: {
+          react: { version: '18.3.1' } 
+        }
+      }
+    })
   ],
 })
