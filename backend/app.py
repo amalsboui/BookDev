@@ -47,6 +47,6 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=7001)
     #0.0.0.0 makes the flask accessible inside the docker network
 
-    # Remove pagination params for now
+    # Remove pagination params for now(may add later)
     # start_index = int(request.args.get('startIndex', 0))  # Default start index is 0
     # max_results = int(request.args.get('maxResults', 21))  # Default to 21 per page
