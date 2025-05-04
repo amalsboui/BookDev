@@ -29,6 +29,11 @@ A modern book recommendation platform powered by Google Books API, built with a 
 - **Testing**: 
   - Backend: Python unit tests
   - Frontend: ESLint
+ 
+## 🧭 Architecture Diagram
+
+![Architecture Diagram](assets/architecture.png)
+
 
 ## 🚀 Getting Started
 
