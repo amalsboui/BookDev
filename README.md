@@ -1,8 +1,8 @@
 # Bookish - Book Recommendation Web App
 
 [![CI/CD Pipeline](https://github.com/amalsboui/BookDev/actions/workflows/workflow.yml/badge.svg)](https://github.com/amalsboui/BookDev/actions)
-[![Frontend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-frontend)](https://hub.docker.com/repository/docker/hophopp/bookdev-frontend)
-[![Backend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-frontend)](https://hub.docker.com/repository/docker/hophopp/bookdev-frontend)
+[![Frontend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-frontend)](https://hub.docker.com/repository/docker/amalsboui/bookdev-frontend)
+[![Backend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-backend)](https://hub.docker.com/repository/docker/amalsboui/bookdev-backend)
 
 A modern book recommendation platform powered by Google Books API, built with a microservices architecture and DevOps best practices.
 
@@ -12,7 +12,7 @@ A modern book recommendation platform powered by Google Books API, built with a 
 - Browse curated book recommendations
 - Search books using Google Books API
 - Responsive UI with Tailwind CSS
-  zz Containerized with Docker
+- Containerized with Docker
 - Unit & integration testing
 - CI/CD Pipeline with GitHub Actions
 - Kubernetes deployment with Minikube
@@ -99,6 +99,7 @@ The project uses GitHub Actions for continuous integration and continuous deploy
 - **.github/workflows/**: CI/CD pipeline configurations
 - **backend/**: Flask application with tests and Dockerfile
 - **frontend/**: React application with Vite, Tailwind, and Nginx configuration
-- **k8s/**: Kubernetes manifests for deployments, services, and ingress
+- **kubernetes/**: Kubernetes manifests for deployments, services, and ingress
 - **README.md**: Project documentation
+- **docker-compose.yaml**: Development environment setup
 
