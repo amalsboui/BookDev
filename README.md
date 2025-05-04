@@ -32,7 +32,7 @@ A modern book recommendation platform powered by Google Books API, built with a 
  
 ## 🧭 Architecture Diagram
 
-![Architecture Diagram](assets/architecture.png)
+![Architecture Diagram](architecture.png)
 
 
 ## 🚀 Getting Started
