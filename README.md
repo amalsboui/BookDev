@@ -1,10 +1,9 @@
 # Bookish - Book Recommendation Web App
 
-[![CI/CD Pipeline](https://github.com/amalsboui/BookDev/actions/workflows/workflow.yml/badge.svg)](https://github.com/amalsboui/BookDev/actions)
-
+[![CI/CD Pipeline](https://github.com/amalsboui/BookDev/actions/workflows/Workflow.yml/badge.svg)](https://github.com/amalsboui/BookDev/actions/workflows/Workflow.yml)
 [![Frontend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-frontend?sort=semver)](https://hub.docker.com/r/amalsboui/bookdev-frontend)
-
 [![Backend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-backend?sort=semver)](https://hub.docker.com/r/amalsboui/bookdev-backend)
+
 
 A modern book recommendation platform powered by Google Books API, built with a microservices architecture and DevOps best practices.
 
