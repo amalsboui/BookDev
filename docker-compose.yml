@@ -13,7 +13,7 @@ services:
      build: ./frontend
      container_name: bookdevops-frontend
      ports:
-       - "7000:5173"
+       - "7000:80"
      depends_on:
        - backend 
      restart: unless-stopped
