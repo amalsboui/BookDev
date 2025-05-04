@@ -7,7 +7,12 @@ ENV PYTHONUNBUFFERED=1 \
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc python3-dev \
+    gcc \
+    python3-dev \
+    libpython3.9-stdlib \
+    libc6-dev \
+    locales \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
