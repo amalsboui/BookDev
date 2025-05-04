@@ -18,6 +18,7 @@ export default defineConfig({
     })
   ],
   server: {
+    host: true, // listen on all interfaces
     allowedHosts: ['bookish.local'], 
-  }
+  },
 })
