@@ -1,19 +1,104 @@
-# BookDev 
+# Bookish - Book Recommendation Web App
 
-BookDev is a web application that displays books with their covers, titles, and authors. The frontend is built with **React**, while the backend is powered by **Flask**.  
+[![CI/CD Pipeline](https://github.com/amalsboui/BookDev/actions/workflows/workflow.yml/badge.svg)](https://github.com/amalsboui/BookDev/actions)
+[![Frontend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-frontend)](https://hub.docker.com/repository/docker/hophopp/bookdev-frontend)
+[![Backend Docker Image Version](https://img.shields.io/docker/v/amalsboui/bookdev-frontend)](https://hub.docker.com/repository/docker/hophopp/bookdev-frontend)
 
-##  Development & DevOps  
+A modern book recommendation platform powered by Google Books API, built with a microservices architecture and DevOps best practices.
 
-This project is part of a hands-on **DevOps learning journey**. The application is containerized using **Docker**, with both the frontend and backend running in separate containers managed via **Docker Compose**. The images are pushed to **Docker Hub** to streamline deployment.  
 
-### 🔧 Current Focus  
-- **CI/CD with GitHub Actions**: Automating the deployment process for seamless updates.  
-- **Testing**: Introducing automated tests to ensure reliability as the project grows.  
-- **Continuous Improvements**: Implementing DevOps best practices to enhance scalability and maintainability.  
+## 📚 Features
 
-This is a **work in progress**, with continuous improvements along the way! 
+- Browse curated book recommendations
+- Search books using Google Books API
+- Responsive UI with Tailwind CSS
+  zz Containerized with Docker
+- Unit & integration testing
+- CI/CD Pipeline with GitHub Actions
+- Kubernetes deployment with Minikube
 
----
-  
-📌 *Stay tuned for updates!*  
+
+### Tech Stack
+
+- **Backend**: Flask (Python)
+- **Frontend**: React.js with Tailwind CSS, built using Vite
+- **Containerization**: Docker
+- **Orchestration**: Kubernetes (Minikube)
+- **Web Server**: Nginx (Production)
+- **CI/CD**: GitHub Actions
+- **Container Registry**: DockerHub
+- **Testing**: 
+  - Backend: Python unit tests
+  - Frontend: ESLint
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Docker
+- Minikube
+- kubectl
+- Git
+
+### Local Development Setup
+
+1. **Clone the repository**
+2. **Start Minikube**
+3. **Apply Kubernetes configurations**
+4. **Access the application**
+
+The application should be accessible at the URL specified in your ingress configuration.
+
+## 🐳 Docker Configuration
+
+The project uses Docker to containerize both the frontend and backend services:
+
+### Backend Dockerfile
+
+The backend Dockerfile uses a Python 3.9 image, installs dependencies from requirements.txt, and exposes port 7001.
+
+### Frontend Dockerfile
+
+The frontend uses a multi-stage build with Node.js for building the React application and Nginx for serving the static files.
+
+## ☸️ Kubernetes Configuration
+
+The application leverages Kubernetes for orchestration with several key benefits:
+
+- **High Availability**: Multiple replicas ensure the application remains available with no downtime
+- **Load Balancing**: Automatic traffic distribution among pods using Services and Ingress
+- **Self-Healing**: Failed containers automatically restart, maintaining stability
+- **Centralized Management**: All resources defined as code and managed in a dedicated namespace
+- **Scalability**: Ready for cloud deployment with horizontal scaling capabilities
+
+While developed and tested on Minikube, the Kubernetes configurations are designed to be easily deployed to cloud providers like AWS EKS, Google GKE, or Azure AKS with minimal changes.
+
+Below are the key components:
+
+- **Namespace**: Dedicated namespace for the Bookish application
+- **Deployments**: Separate deployments for frontend and backend
+- **Services**: ClusterIP services for internal communication
+- **Ingress**: Exposes the frontend to external traffic
+
+
+## 🔄 CI/CD Pipeline
+
+The project uses GitHub Actions for continuous integration and continuous deployment:
+
+1. **Continuous Integration**:
+   - Runs tests on each pull request and push to the main branch
+   - Validates code quality using ESLint for frontend
+
+2. **Continuous Deployment**:
+   - On successful merge to main branch:
+     - Builds Docker images
+     - Pushes images to DockerHub
+
+## 📋 Project Structure
+
+- **.github/workflows/**: CI/CD pipeline configurations
+- **backend/**: Flask application with tests and Dockerfile
+- **frontend/**: React application with Vite, Tailwind, and Nginx configuration
+- **k8s/**: Kubernetes manifests for deployments, services, and ingress
+- **README.md**: Project documentation
 
